@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private bool doMovemnet = true;
+    
     public float panSpeed = 30f;
     public float panBorderThickness = 10f;
 
@@ -17,10 +17,7 @@ public class CameraController : MonoBehaviour
             this.enabled = false;
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-            doMovemnet = !doMovemnet;
-        if (!doMovemnet)
-            return;
+     
 
         if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
         {
